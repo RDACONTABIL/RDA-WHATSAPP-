@@ -1,0 +1,1 @@
+// Script para interação com o WhatsApp Web

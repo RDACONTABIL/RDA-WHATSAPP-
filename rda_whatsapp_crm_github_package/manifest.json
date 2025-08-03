@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "RDA WhatsApp CRM",
+  "version": "1.0",
+  "description": "Extensão com IA integrada ao WhatsApp Web para CRM e atendimento.",
+  "permissions": ["storage", "scripting", "tabs"],
+  "host_permissions": ["https://web.whatsapp.com/*"],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [{
+    "matches": ["https://web.whatsapp.com/*"],
+    "js": ["src/content.js"]
+  }],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": "assets/icon.png"
+  },
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  }
+}
